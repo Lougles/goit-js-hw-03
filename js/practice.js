@@ -1,3 +1,4 @@
+console.log("Практика, задание 2");
 let arr = [1, 2, 'dsfsd', 3, 4, 5, 'dfvtr', 'gfbda', 5.5, 4.8, 9, 1.5, 7.6, 8, 9, 'sdsdc', 'scdsc'];
 console.log("Изначальный массив: ",arr);
 const addToArray = function (arr) {

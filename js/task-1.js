@@ -8,7 +8,6 @@ const user = {
     this[NewElem] = NewValue;
   },
   updateHobby(newHobby) {
-    // console.log("Start: ", this);
     this.hobby = newHobby;
   },
   updatePremium(newPremium) {
@@ -18,14 +17,9 @@ const user = {
 
 user.addNewKey({NewElem:'mood', NewValue: 'happy' });
 console.log(user);
-// user.updateHobby('skydiving');
-// user.updatePremium(false);
-// console.log("End: ",user);
-// const keys = Object.keys(user);
-
-// for (const key of keys) {
-//   console.log("Key: ",key);
-//   console.log("element: ",user[key]);
-// }
+user.updateHobby('skydiving');
+user.updatePremium(false);
+console.log("End: ",user);
+const keys = Object.keys(user);
 
 console.log("==============================================================================");

@@ -4,10 +4,8 @@ const user = {
   age: 20,
   hobby: 'html',
   premium: true,
-  addNewKey(NewKey, NewElement) {
-    const key = Object.keys(this);
-    console.log(key);
-    key.push(NewKey);
+  addNewKey({NewElem, NewValue}) {
+    this[NewElem] = NewValue;
   },
   updateHobby(newHobby) {
     // console.log("Start: ", this);
@@ -18,8 +16,8 @@ const user = {
   },
 };
 
-user.addNewKey('mood');
-  console.log(user);
+user.addNewKey({NewElem:'mood', NewValue: 'happy' });
+console.log(user);
 // user.updateHobby('skydiving');
 // user.updatePremium(false);
 // console.log("End: ",user);

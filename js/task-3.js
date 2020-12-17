@@ -1,5 +1,6 @@
-console.log("Task-2");
-const findBestEmployee = function(employees) {
+console.log("Task-3");
+const findBestEmployee = function (employees) {
+  console.log("Отделы компании: ",employees);
   const value = Object.values(employees);
   const key = Object.keys(employees);
   let maxNum = 0;
@@ -8,19 +9,19 @@ const findBestEmployee = function(employees) {
       maxNum = value[i];
     }
   }
-  console.log(maxNum);
-  for (let i = 0; i < key.length; i += 1){
-    if (key[i] === maxNum) {
-      console.log("qwerty");
-      return key[i];
-    }
-  }
+  let indexValue = value.indexOf(maxNum);
+  return key[indexValue];
 };
 
-/*
- * Вызовы функции для проверки работоспособности твоей реализации.
- */
-console.log(
+console.log("Самый продуктивный сотрудник: ",
+  findBestEmployee({
+    Nadin: 150,
+    Kate: 219,
+    Victoria: 220,
+    Elizabeth: 147,
+  }),
+); // 
+console.log("Самый продуктивный сотрудник: ",
   findBestEmployee({
     ann: 29,
     david: 35,
@@ -29,7 +30,7 @@ console.log(
   }),
 ); // lorence
 
-console.log(
+console.log("Самый продуктивный сотрудник: ",
   findBestEmployee({
     poly: 12,
     mango: 17,
@@ -37,7 +38,7 @@ console.log(
   }),
 ); // mango
 
-console.log(
+console.log("Самый продуктивный сотрудник: ",
   findBestEmployee({
     lux: 147,
     david: 21,

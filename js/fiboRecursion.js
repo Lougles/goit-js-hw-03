@@ -8,6 +8,7 @@ const febo = function (amount, resArr = [0, 1]) {
   }
 }
 
-console.log(febo(15));
+const enter = prompt("Количество рекурсий фибоначи?");
+console.log(febo(enter));
 
 

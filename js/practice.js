@@ -1,5 +1,5 @@
 let arr = [1, 2, 'dsfsd', 3, 4, 5, 'dfvtr', 'gfbda', 5.5, 4.8, 9, 1.5, 7.6, 8, 9, 'sdsdc', 'scdsc'];
-
+console.log("Изначальный массив: ",arr);
 const addToArray = function (arr) {
     let responseArr = [];
     responseArr['int'] = [];
@@ -9,7 +9,6 @@ const addToArray = function (arr) {
         if (Number.isInteger(item)) {
             responseArr['int'].push(item);
         }
-        
         else if (item % 1 !== 0 && typeof item === 'number') {
             responseArr['float'].push(item);
         }
@@ -19,4 +18,4 @@ const addToArray = function (arr) {
     }
     return responseArr;
 }
-console.log(addToArray(arr));
+console.log("Результат",addToArray(arr));
